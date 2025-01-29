@@ -132,7 +132,7 @@ sed -i "s#__IMAGE_DEEPSEEK_CHATBOT__#$ECR_REPO:0.1#g" chatbot-ui/manifests/deplo
 sed -i '' "s|__PASSWORD__|$(openssl rand -base64 12 | tr -dc A-Za-z0-9 | head -c 16)|" chatbot-ui/manifests/deployment.yaml
 
 # Deploy the UI and create the ingress class required for load balancers
-kubectl apply -f chatbot-ui/manifests/ingress-class.yam
+kubectl apply -f chatbot-ui/manifests/ingress-class.yaml
 kubectl apply -f chatbot-ui/manifests/deployment.yaml
 
 # Get the URL for the load balancer to access the application

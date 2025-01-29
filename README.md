@@ -33,7 +33,7 @@ We'll use Terraform to easily provision the infrastructure, including a VPC, ECR
 ``` bash
 # Clone the GitHub repo with the manifests
 git clone https://github.com/aws-samples/deepseek-using-vllm-on-eks
-cd deepseek-eks-automode
+cd deepseek-using-vllm-on-eks
 
 # Apply the Terraform configuration
 terraform init

@@ -64,7 +64,7 @@ We’ll deploy the **DeepSeek-R1-Distill-Llama-8B** model using vLLM. To simplif
 
 ``` bash
 # Use the sed command to replace the placeholder with the model name and configuration parameters
-sed -i '' "s|__MODEL_NAME_AND_PARAMETERS__|deepseek-ai/DeepSeek-R1-Distill-Llama-8B --max_model 2048|g" manifests/deepseek-deployment-gpu.yaml
+sed -i "s|__MODEL_NAME_AND_PARAMETERS__|deepseek-ai/DeepSeek-R1-Distill-Llama-8B --max_model 2048|g" manifests/deepseek-deployment-gpu.yaml
 
 # Deploy the DeepSeek model on Kubernetes
 kubectl apply -f manifests/deepseek-deployment-gpu.yaml
@@ -129,7 +129,7 @@ docker push $ECR_REPO:0.1
 sed -i "s#__IMAGE_DEEPSEEK_CHATBOT__#$ECR_REPO:0.1#g" chatbot-ui/manifests/deployment.yaml
 
 # Generate a random password for the Chatbot UI login
-sed -i '' "s|__PASSWORD__|$(openssl rand -base64 12 | tr -dc A-Za-z0-9 | head -c 16)|" chatbot-ui/manifests/deployment.yaml
+sed -i "s|__PASSWORD__|$(openssl rand -base64 12 | tr -dc A-Za-z0-9 | head -c 16)|" chatbot-ui/manifests/deployment.yaml
 
 # Deploy the UI and create the ingress class required for load balancers
 kubectl apply -f chatbot-ui/manifests/ingress-class.yaml

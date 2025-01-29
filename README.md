@@ -1,7 +1,6 @@
 # Hosting DeepSeek-R1 on Amazon EKS
 
-In this tutorial, we’ll walk you through how to host DeepSeek models on AWS using **Amazon EKS**. This approach leverages the flexibility and scalability of Kubernetes, 
-while eliminating the need for you to manage the Kubernetes control plane, compute, storage, and networking components.
+In this tutorial, we’ll walk you through how to host [**DeepSeek-R1**](https://github.com/deepseek-ai/DeepSeek-R1) model on AWS using **Amazon EKS**. We are using [**Amazon EKS Auto Mode**](https://aws.amazon.com/eks/auto-mode/?trk=309fae93-0dac-4940-8d50-5b585d53959f&sc_channel=el) for the the flexibility and scalability that it provides, while eliminating the need for you to manage the Kubernetes control plane, compute, storage, and networking components.
 
 ## Deploying DeepSeek-R1 on Amazon EKS Auto Mode
 

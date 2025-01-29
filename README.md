@@ -136,7 +136,7 @@ kubectl apply -f chatbot-ui/manifests/ingress-class.yaml
 kubectl apply -f chatbot-ui/manifests/deployment.yaml
 
 # Get the URL for the load balancer to access the application
-echo http://$(k get ingress/deepseek-chatbot-ingress -n deepseek -o json | jq -r '.status.loadBalancer.ingress[0].hostname')
+echo http://$(kubectl get ingress/deepseek-chatbot-ingress -n deepseek -o json | jq -r '.status.loadBalancer.ingress[0].hostname')
 ```
 
 To access the Chatbot UI, you'll need the username and password stored in a Kubernetes secret.

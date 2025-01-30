@@ -1,5 +1,5 @@
 locals {
-  region   = "us-east-1"
+  region   = "ap-northeast-2"
   vpc_cidr = "10.0.0.0/16"
   name     = "eks-automode"
   azs      = slice(data.aws_availability_zones.available.names, 0, 3)
